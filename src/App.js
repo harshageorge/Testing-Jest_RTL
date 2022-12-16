@@ -10,9 +10,13 @@ function App() {
   <button 
   disabled={ifchecked}
   onClick={()=>setbuttonColor(newButtonColor)}
-
-  style={{backgroundColor:buttonColor}}>Change to {newButtonColor}</button>
-  <input  type="checkbox" defaultChecked = {ifchecked} onChange = {()=>setifchecked(!ifchecked)}/>
+ style={{backgroundColor:ifchecked?"gray":buttonColor}}>Change to {newButtonColor}</button>
+  <input  
+  type="checkbox"
+  id="disable-button-checkbox"
+   defaultChecked = {ifchecked} 
+   onChange = {()=>setifchecked(!ifchecked)}/>
+   <label htmlFor="disable-button-checkbox">Disable button</label>
  </div>
   );
 }
